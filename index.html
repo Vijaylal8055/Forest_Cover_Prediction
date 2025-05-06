@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Environmental Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Environmental Predictor</h1>
+        <form id="prediction-form" action="/predict" method="POST">
+            <label>Feature 1 (Temperature):</label>
+            <input type="number" name="feature_1" required>
+
+            <label>Feature 2 (Humidity):</label>
+            <input type="number" name="feature_2" required>
+
+            <label>Feature 3 (Wind Speed):</label>
+            <input type="number" name="feature_3" required>
+
+            <button type="submit">Get Prediction</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
